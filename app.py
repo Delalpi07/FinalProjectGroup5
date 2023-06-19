@@ -99,6 +99,21 @@ def courses():
 
     return "Akses ditolak. Silakan login sebagai pengguna."
 
+# Route untuk halaman dashboard pengguna
+@app.route('/about')
+def about():
+    # Periksa apakah pengguna telah login
+    if 'user_id' not in session:
+        return redirect('/login')
+
+    user_id = ObjectId(session['user_id'])
+    user = users_collection.find_one({'_id': user_id})
+
+    if user:
+        return render_template('about.html', user=user)
+
+    return "Akses ditolak. Silakan login sebagai pengguna."
+
 # Route untuk halaman admin
 @app.route('/admin')
 def admin():
@@ -129,8 +144,8 @@ def admin2():
     return "Akses ditolak. Silakan login sebagai admin."
 
 # Route untuk halaman user
-@app.route('/user')
-def user():
+@app.route('/course_details')
+def course_details():
     # Periksa apakah pengguna telah login
     if 'user_id' not in session:
         return redirect('/login')
@@ -139,7 +154,7 @@ def user():
     user = users_collection.find_one({'_id': user_id})
 
     if user:
-        return render_template('user.html', user=user)
+        return render_template('course_details.html', user=user)
 
     return "Akses ditolak. Silakan login sebagai pengguna."
 
