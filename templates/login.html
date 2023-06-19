@@ -5,6 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!-- Favicons -->
+    <link href="/static/img/logo.png" rel="icon">
+    <link href="/static/img/logo.png" rel="apple-touch-icon">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -17,237 +21,126 @@
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
 
     <style>
+        @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap");
+
         * {
-            font-family: 'Gowun Dodum', sans-serif;
-        }
-
-        .mytitle>button {
-            width: 200px;
-            height: 50px;
-
-            background-color: transparent;
-            color: #65b872;
-
-            border-radius: 50px;
-            border: 1px solid #65b872;
-
-            margin-top: 10px;
-        }
-
-        .mytitle>button:hover {
-            border: 2px solid rgb(26, 24, 24);
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
         }
 
         body {
-            background-image: url('https://wallpaperaccess.com/full/21971.jpg');
-            background-repeat: no-repeat;
-            background-size: cover;
+            background: #5fcf80;
+            height: 100vh;
         }
 
-        header {
-            background: rgba(255, 255, 225, 0.5);
-        }
-
-        article {
-            background-color: rgba(255, 255, 255, 0.5);
-            backdrop-filter: blur(10px);
-            padding: 1rem;
-        }
-
-        @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400");
-        @import url("https://fonts.googleapis.com/css?family=Playfair+Display");
-
-        .message,
-        .form,
-        form {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            background-color: #e4e6e2;
-        }
-
-
-        .container {
-            width: 700px;
-            height: 400px;
-            background: #65b872;
-            position: relative;
-            display: grid;
-            grid-template: 100%/50% 50%;
-            box-shadow: 2px 2px 10px 0 rgba(51, 51, 51, 0.2);
-        }
-
-        .message {
+        .center {
             position: absolute;
-            background-color: #e4e6e2;
-            width: 50%;
-            height: 100%;
-            transition: 0.5s all ease;
-            transform: translateX(100%);
-            z-index: 4;
-        }
-
-        .message:before {
-            position: absolute;
-            content: "";
-            width: 1px;
-            height: 70%;
-            background: #5a5353;
-            opacity: 0;
-            left: 0;
-            top: 15%;
-        }
-
-        .message .button {
-            margin: 5px;
-        }
-
-        .signup:before {
-            opacity: 0.3;
-            left: 0;
-        }
-
-        .login:before {
-            opacity: 0.3;
-            left: 100%;
-        }
-
-        .btn-wrapper {
-            width: 60%;
-        }
-
-        .form {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 420px;
             width: 100%;
-            height: 100%;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
         }
 
-        .form--heading {
-            font-size: 25px;
-            height: 50px;
-            color: #65b872;
-            font-family: "Source Sans Pro", sans-serif;
+        .center h1 {
+            text-align: center;
+            padding: 10px 0;
+            border-bottom: 1px solid silver;
         }
 
-        .form--signup {
-            border-right: 1px solid #999;
-        }
-
-        form {
-            width: 70%;
-        }
-
-        form>* {
-            margin: 10px;
-        }
-
-        form input {
-            width: 90%;
-            border: 0;
-            border-bottom: 1px solid #a59d9d;
-            font-size: 13px;
-            font-weight: 300;
-            color: #65b872;
-            letter-spacing: 0.11em;
-            background-color: #f2eee3;
-        }
-
-        form input::placeholder {
-            color: #383030;
-            font-size: 10px;
-        }
-
-        form input:focus {
-            outline: 0;
-            border-bottom: 1px solid #65b872;
-            transition: 0.6s all ease;
-        }
-
-        .button {
-            width: 100%;
-            height: 30px;
-            border: 0;
-            outline: 0;
-            color: #fffefa;
-            font-size: 15px;
-            font-weight: 400;
+        .center form {
+            padding: 20px 40px;
             position: relative;
-            z-index: 3;
-            background: #65b872;
-            font-family: "Source Sans Pro", sans-serif;
+        }
+
+        .center form label {
+            font-size: 14px;
+            font-weight: 500;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .center form input[type="text"],
+        .center form input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid silver;
+            border-radius: 4px;
+            outline: none;
+            background: transparent;
+            box-sizing: border-box;
+        }
+
+        .center form input[type="submit"] {
+            background: #5fcf80;
+            color: white;
+            border: none;
             cursor: pointer;
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
             border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .center form input[type="submit"]:hover {
+            background: #5fcf80;
+        }
+
+        .center form .signup {
+            text-align: center;
+            font-size: 14px;
+            font-weight: 500;
+            margin-top: 20px;
+        }
+
+        .center form .signup a {
+            color: #5fcf80;
+            text-decoration: none;
         }
     </style>
-    <script>
-        function open_box() {
-            $('#post-box').show()
-        }
-
-        function close_box() {
-            $('#post-box').hide()
-        }
-    </script>
 </head>
 
 <body>
-    <!--nav section start -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-light">
-        <div class="container-fluid">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/">Home</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-
-    <div class="container">
-        <div class="message signup">
-            <div class="btn-wrapper">
-                <button class="button" id="signup">Sign Up</button>
-                <button class="button" id="login"> Login</button>
-            </div>
-        </div>
-        <div class="form form--signup">
-            <div class="form--heading">Welcome! Sign Up</div>
-            <form autocomplete="off">
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password">
-                <button class="button">Sign Up</button>
-            </form>
-        </div>
-        <div class="form form--login">
-            <div class="form--heading">Welcome back! </div>
-            <form autocomplete="off">
-                <input type="text" placeholder="Name">
-                <input type="password" placeholder="Password">
-                <button class="button">Login</button>
-            </form>
-        </div>
+    <div class="center">
+        <h1>Login</h1>
+        <form method="POST" action="{{ url_for('login') }}" onsubmit="return validateForm()">
+            {% if error_message %}
+            <p>{{ error_message }}</p>
+            {% endif %}
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <label for="password">Kata Sandi</label>
+            <input type="password" id="password" name="password" required>
+            <input type="submit" value="Login">
+        </form>
+        <div class="signup" style="text-align: center;">Belum punya akun? <a href="/signup">Daftar</a></div>
     </div>
 
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
     <script>
-        $("#signup").click(function () {
-            $(".message").css("transform", "translateX(100%)");
-            if ($(".message").hasClass("login")) {
-                $(".message").removeClass("login");
-            }
-            $(".message").addClass("signup");
-        });
+        function validateForm() {
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
 
-        $("#login").click(function () {
-            $(".message").css("transform", "translateX(0)");
-            if ($(".message").hasClass("login")) {
-                $(".message").removeClass("signup");
+            if (email === "") {
+                alert("Silakan masukkan email Anda.");
+                return false;
             }
-            $(".message").addClass("login");
-        });
+
+            if (password === "") {
+                alert("Silakan masukkan kata sandi Anda.");
+                return false;
+            }
+
+            return true;
+        }
     </script>
-
 </body>
 
 </html>
