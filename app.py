@@ -29,7 +29,7 @@ def login():
         user = users_collection.find_one({'email': email})
         if user and pbkdf2_sha256.verify(password, user['password']):
             session['user_id'] = str(user['_id'])
-            return redirect('/courses')
+            return redirect('/user_dashboard')
 
         error_message = "Email atau kata sandi salah. Silakan coba lagi."
         return render_template('login.html', error_message=error_message)
@@ -83,6 +83,19 @@ def courses():
 
     return "Akses ditolak. Silakan login sebagai pengguna."
 
+@app.route('/user_dashboard')
+def user_dashboard():
+    if 'user_id' not in session:
+        return redirect('/login')
+
+    user_id = ObjectId(session['user_id'])
+    user = users_collection.find_one({'_id': user_id})
+
+    if user:
+        return render_template('user_dashboard.html', user=user)
+
+    return "Akses ditolak. Silakan login sebagai pengguna."
+
 @app.route('/about')
 def about():
     if 'user_id' not in session:
@@ -122,8 +135,8 @@ def admin2():
 
     return "Akses ditolak. Silakan login sebagai admin."
 
-@app.route('/course_details')
-def course_details():
+@app.route('/course0')
+def course0():
     if 'user_id' not in session:
         return redirect('/login')
 
@@ -131,7 +144,124 @@ def course_details():
     user = users_collection.find_one({'_id': user_id})
 
     if user:
-        return render_template('course_details.html', user=user)
+        return render_template('course0.html', user=user)
+
+    return "Akses ditolak. Silakan login sebagai pengguna."
+
+@app.route('/course1')
+def course1():
+    if 'user_id' not in session:
+        return redirect('/login')
+
+    user_id = ObjectId(session['user_id'])
+    user = users_collection.find_one({'_id': user_id})
+
+    if user:
+        return render_template('course1.html', user=user)
+
+    return "Akses ditolak. Silakan login sebagai pengguna."
+
+@app.route('/course2')
+def course2():
+    if 'user_id' not in session:
+        return redirect('/login')
+
+    user_id = ObjectId(session['user_id'])
+    user = users_collection.find_one({'_id': user_id})
+
+    if user:
+        return render_template('course2.html', user=user)
+
+    return "Akses ditolak. Silakan login sebagai pengguna."
+
+@app.route('/course3')
+def course3():
+    if 'user_id' not in session:
+        return redirect('/login')
+
+    user_id = ObjectId(session['user_id'])
+    user = users_collection.find_one({'_id': user_id})
+
+    if user:
+        return render_template('course3.html', user=user)
+
+    return "Akses ditolak. Silakan login sebagai pengguna."
+
+@app.route('/course4')
+def course4():
+    if 'user_id' not in session:
+        return redirect('/login')
+
+    user_id = ObjectId(session['user_id'])
+    user = users_collection.find_one({'_id': user_id})
+
+    if user:
+        return render_template('course4.html', user=user)
+
+    return "Akses ditolak. Silakan login sebagai pengguna."
+
+@app.route('/course5')
+def course5():
+    if 'user_id' not in session:
+        return redirect('/login')
+
+    user_id = ObjectId(session['user_id'])
+    user = users_collection.find_one({'_id': user_id})
+
+    if user:
+        return render_template('course5.html', user=user)
+
+    return "Akses ditolak. Silakan login sebagai pengguna."
+
+@app.route('/course6')
+def course6():
+    if 'user_id' not in session:
+        return redirect('/login')
+
+    user_id = ObjectId(session['user_id'])
+    user = users_collection.find_one({'_id': user_id})
+
+    if user:
+        return render_template('course6.html', user=user)
+
+    return "Akses ditolak. Silakan login sebagai pengguna."
+
+@app.route('/course7')
+def course7():
+    if 'user_id' not in session:
+        return redirect('/login')
+
+    user_id = ObjectId(session['user_id'])
+    user = users_collection.find_one({'_id': user_id})
+
+    if user:
+        return render_template('course7.html', user=user)
+
+    return "Akses ditolak. Silakan login sebagai pengguna."
+
+@app.route('/course8')
+def course8():
+    if 'user_id' not in session:
+        return redirect('/login')
+
+    user_id = ObjectId(session['user_id'])
+    user = users_collection.find_one({'_id': user_id})
+
+    if user:
+        return render_template('course8.html', user=user)
+
+    return "Akses ditolak. Silakan login sebagai pengguna."
+
+@app.route('/course9')
+def course9():
+    if 'user_id' not in session:
+        return redirect('/login')
+
+    user_id = ObjectId(session['user_id'])
+    user = users_collection.find_one({'_id': user_id})
+
+    if user:
+        return render_template('course9.html', user=user)
 
     return "Akses ditolak. Silakan login sebagai pengguna."
 

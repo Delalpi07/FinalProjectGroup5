@@ -76,27 +76,29 @@
       <div class="container" data-aos="fade-up">
         <div class="row" data-aos="zoom-in" data-aos-delay="100">
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
             <div class="course-item">
               <img src="/static/img/courses_0.jpg" class="img-fluid" alt="...">
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                 </div>
-                <h3><a href="course_details">Pronunciation</a></h3>
+                <h3><a href="{{ url_for('course0') }}">Pronunciation</a></h3>
               </div>
             </div>
           </div> <!-- End Course Item-->
-
+          
+          <!-- ======= Courses Section ======= -->
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
             <div class="course-item">
               <img src="/static/img/courses_1.jpg" class="img-fluid" alt="...">
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                 </div>
-                <h3><a href="course-details.html">Greetings/Salam</a></h3>
+                <h3><a href="{{ url_for('course1') }}">Greetings/Salam </a></h3>
               </div>
             </div>
           </div> <!-- End Course Item-->
+
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
             <div class="course-item">
@@ -104,7 +106,7 @@
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                 </div>
-                <h3><a href="course-details.html">At the Airport/Di Bandara </a></h3>
+                <h3><a href="{{ url_for('course2') }}">At the Airport/Di Bandara </a></h3>
               </div>
             </div>
           </div> <!-- End Course Item-->
@@ -115,7 +117,7 @@
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                 </div>
-                <h3><a href="course-details.html">At the Shop/Di Toko </a></h3>
+                <h3><a href="{{ url_for('course3') }}">At the Shop/Di Toko </a></h3>
               </div>
             </div>
           </div> <!-- End Course Item-->
@@ -126,7 +128,7 @@
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                 </div>
-                <h3><a href="course-details.html">At the Hotel/Di Hotel </a></h3>
+                <h3><a href="{{ url_for('course4') }}">At the Hotel/Di Hotel </a></h3>
               </div>
             </div>
           </div> <!-- End Course Item-->
@@ -137,7 +139,7 @@
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                 </div>
-                <h3><a href="course-details.html">Travelling/Jalan-Jalan </a></h3>
+                <h3><a href="{{ url_for('course5') }}">Travelling/Jalan-Jalan </a></h3>
               </div>
             </div>
           </div> <!-- End Course Item-->
@@ -148,7 +150,7 @@
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                 </div>
-                <h3><a href="course-details.html">Hobbies/Kegemaran </a></h3>
+                <h3><a href="{{ url_for('course6') }}">Hobbies/Kegemaran </a></h3>
               </div>
             </div>
           </div> <!-- End Course Item-->
@@ -159,7 +161,7 @@
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                 </div>
-                <h3><a href="course-details.html">At the Restaurant/Di Restoran </a></h3>
+                <h3><a href="{{ url_for('course7') }}">At the Restaurant/Di Restoran </a></h3>
               </div>
             </div>
           </div> <!-- End Course Item-->
@@ -170,7 +172,7 @@
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                 </div>
-                <h3><a href="course-details.html">At the Hospital/Di Rumah Sakit</a></h3>
+                <h3><a href="{{ url_for('course8') }}">At the Hospital/Di Rumah Sakit</a></h3>
               </div>
             </div>
           </div> <!-- End Course Item-->
@@ -181,22 +183,10 @@
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                 </div>
-                <h3><a href="course-details.html">Using Public Services/Di Kantor Pelayanan Publik</a></h3>
+                <h3><a href="{{ url_for('course9') }}">Using Public Services/Di Kantor Pelayanan Publik</a></h3>
               </div>
             </div>
           </div> <!-- End Course Item-->
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-            <div class="course-item">
-              <img src="/static/img/courses_10.jpg" class="img-fluid" alt="...">
-              <div class="course-content">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                </div>
-                <h3><a href="course-details.html">At the Tourist Attraction/Di Tempat Wisata</a></h3>
-              </div>
-            </div>
-          </div> <!-- End Course Item-->
-
         </div>
 
       </div>
