@@ -118,8 +118,8 @@ def about():
 
     return "Akses ditolak. Silakan login sebagai pengguna."
 
-@app.route('/admin')
-def admin():
+@app.route('/admin_courses')
+def admin_courses():
     if 'user_id' not in session:
         return redirect('/login')
 
@@ -127,12 +127,12 @@ def admin():
     user = admin_collection.find_one({'_id': user_id})
 
     if user:
-       return render_template('/admin.html', user=user)
+       return render_template('/admin_courses.html', user=user)
 
     return "Akses ditolak. Silakan login sebagai admin."
 
-@app.route('/admin2')
-def admin2():
+@app.route('/admin_about')
+def admin_about():
     if 'user_id' not in session:
         return redirect('/login')
 
@@ -140,7 +140,7 @@ def admin2():
     user = admin_collection.find_one({'_id': user_id}) 
 
     if user:
-       return render_template('/admin2.html', user=user)
+       return render_template('/admin_about.html', user=user)
 
     return "Akses ditolak. Silakan login sebagai admin."
 
