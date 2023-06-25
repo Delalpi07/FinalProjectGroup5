@@ -144,6 +144,136 @@ def admin_about():
 
     return "Akses ditolak. Silakan login sebagai admin."
 
+@app.route('/admin_course0')
+def admin_course0():
+    if 'user_id' not in session:
+        return redirect('/login')
+
+    user_id = ObjectId(session['user_id'])
+    user = admin_collection.find_one({'_id': user_id}) 
+
+    if user:
+       return render_template('/admin_course0.html', user=user)
+
+    return "Akses ditolak. Silakan login sebagai admin."
+
+@app.route('/admin_course1')
+def admin_course1():
+    if 'user_id' not in session:
+        return redirect('/login')
+
+    user_id = ObjectId(session['user_id'])
+    user = admin_collection.find_one({'_id': user_id}) 
+
+    if user:
+       return render_template('/admin_course1.html', user=user)
+
+    return "Akses ditolak. Silakan login sebagai admin."
+
+@app.route('/admin_course2')
+def admin_course2():
+    if 'user_id' not in session:
+        return redirect('/login')
+
+    user_id = ObjectId(session['user_id'])
+    user = admin_collection.find_one({'_id': user_id}) 
+
+    if user:
+       return render_template('/admin_course2.html', user=user)
+
+    return "Akses ditolak. Silakan login sebagai admin."
+
+@app.route('/admin_course3')
+def admin_course3():
+    if 'user_id' not in session:
+        return redirect('/login')
+
+    user_id = ObjectId(session['user_id'])
+    user = admin_collection.find_one({'_id': user_id}) 
+
+    if user:
+       return render_template('/admin_course3.html', user=user)
+
+    return "Akses ditolak. Silakan login sebagai admin."
+
+@app.route('/admin_course4')
+def admin_course4():
+    if 'user_id' not in session:
+        return redirect('/login')
+
+    user_id = ObjectId(session['user_id'])
+    user = admin_collection.find_one({'_id': user_id}) 
+
+    if user:
+       return render_template('/admin_course4.html', user=user)
+
+    return "Akses ditolak. Silakan login sebagai admin."
+
+@app.route('/admin_course5')
+def admin_course5():
+    if 'user_id' not in session:
+        return redirect('/login')
+
+    user_id = ObjectId(session['user_id'])
+    user = admin_collection.find_one({'_id': user_id}) 
+
+    if user:
+       return render_template('/admin_course5.html', user=user)
+
+    return "Akses ditolak. Silakan login sebagai admin."
+
+@app.route('/admin_course6')
+def admin_course6():
+    if 'user_id' not in session:
+        return redirect('/login')
+
+    user_id = ObjectId(session['user_id'])
+    user = admin_collection.find_one({'_id': user_id}) 
+
+    if user:
+       return render_template('/admin_course6.html', user=user)
+
+    return "Akses ditolak. Silakan login sebagai admin."
+
+@app.route('/admin_course7')
+def admin_course7():
+    if 'user_id' not in session:
+        return redirect('/login')
+
+    user_id = ObjectId(session['user_id'])
+    user = admin_collection.find_one({'_id': user_id}) 
+
+    if user:
+       return render_template('/admin_course7.html', user=user)
+
+    return "Akses ditolak. Silakan login sebagai admin."
+
+@app.route('/admin_course8')
+def admin_course8():
+    if 'user_id' not in session:
+        return redirect('/login')
+
+    user_id = ObjectId(session['user_id'])
+    user = admin_collection.find_one({'_id': user_id}) 
+
+    if user:
+       return render_template('/admin_course8.html', user=user)
+
+    return "Akses ditolak. Silakan login sebagai admin."
+
+@app.route('/admin_course9')
+def admin_course9():
+    if 'user_id' not in session:
+        return redirect('/login')
+
+    user_id = ObjectId(session['user_id'])
+    user = admin_collection.find_one({'_id': user_id}) 
+
+    if user:
+       return render_template('/admin_course9.html', user=user)
+
+    return "Akses ditolak. Silakan login sebagai admin."
+
 @app.route('/course0')
 def course0():
     if 'user_id' not in session:
@@ -277,7 +407,7 @@ def course9():
 @app.route('/logout')
 def logout():
     session.pop('user_id', None)
-    return redirect('/')
+    return render_template ('login.html')
 
 
 if __name__ == '__main__':
